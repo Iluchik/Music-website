@@ -1,0 +1,284 @@
+@import "fonts.scss";
+@import "iconsfont.scss";
+@import "reset.scss";
+
+html{
+	height:100%;
+}
+
+body{
+	height: 100%;
+	background-color: #030303;
+	font-family: Open Sans;
+	color: #ffffff;
+}
+
+ul{
+	list-style: none;
+}
+
+.wrapper {
+	min-height: 100%;
+	display: grid;
+	grid-template: minmax(414px, auto) 1fr minmax(275px, auto) / 1fr;
+	grid-template-areas: 
+	"header"
+	"main"
+	"footer";
+}
+
+.header {
+	grid-area: header;
+	display: grid;
+	align-items: center;
+	grid-template: 1fr / 1fr minmax(auto, 1704px) 1fr;
+		&__menu {
+			grid-column: 2 / 3;
+		}
+
+		&__list {
+			display: grid;
+			grid-template: 1fr / minmax(auto, 568px) minmax(auto, 568px) minmax(auto, 568px);
+			grid-auto-flow: column;
+			justify-items: center;
+		}
+
+		&__link {
+			font-weight: 700;
+			font-size: 46px;
+			line-height: 70px;
+			-webkit-text-fill-color: transparent;
+			-webkit-text-stroke: 1px #ffffff;
+			text-decoration: none;
+			&:hover{
+				-webkit-text-fill-color: #ffffff;
+				-webkit-text-stroke: 0 #030303;
+		}
+	}
+}
+
+.main {
+	grid-area: main;
+	display: grid;
+	grid-template: 1fr / 1fr minmax(auto, 1704px) 1fr;
+}
+
+.content {
+	grid-column: 2 / 3;
+	display: grid;
+	grid-template: auto auto 1fr / 50px 1fr 50px;
+
+	&__text {
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 25px;
+		text-indent: 50px;
+		grid-column: 2 / 3;
+	}
+}
+
+.sidebar{
+	visibility: hidden;
+	display: grid;
+	grid-row: 1 / 4;
+	&__return{
+		align-self: end;
+		text-decoration: none;
+		-webkit-text-fill-color: transparent;
+		-webkit-text-stroke: 1px #ffffff;
+		&:hover{
+			-webkit-text-fill-color: #ffffff;
+			-webkit-text-stroke: 0 #030303;
+		}
+	}
+}
+
+.footer {
+	grid-area: footer;
+	display: grid;
+	grid-template: 1fr / 1fr minmax(auto, 568px) minmax(auto, 568px) minmax(auto, 568px) 1fr;
+	align-items: center;
+	font-family: 'Avenir Next Cyr';
+	color: #666666;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 22.05px;
+	letter-spacing: 0.03em;
+		&__copy {
+			grid-column: 4 / 5;
+			justify-self: center;
+		}
+
+		&__text {
+			grid-column: 3 / 4;
+			justify-self: center;
+		}
+
+		&__messengers {
+			grid-column: 2 / 3;
+		}
+}
+
+.messenger {
+display: grid;
+grid-template: 1fr / minmax(auto, 190) minmax(auto, 190) minmax(auto, 190);
+		&__wa {
+			grid-column: 1 / 2;
+			justify-self: end;
+		}
+
+		&__tg {
+			grid-column: 2 / 3;
+			justify-self: center;
+		}
+
+		&__vk {
+			grid-column: 3 / 4;
+			justify-self: start;
+		}
+}
+
+.Icon {
+	&-Whatsapp, &-TG, &-VK {
+		font-size: 52px;
+		text-decoration: none;
+	}
+	&-Head {
+		font-size: 32px;
+	}
+}
+
+@media (max-width:1370px) {
+	.header {
+		grid-template: 1fr / 1fr minmax(auto, 900px) 1fr;
+		&__list {
+			grid-template: minmax(auto, 70px) minmax(auto, 70px) minmax(auto, 70px) / 1fr;
+		}
+	}
+}
+
+@media (max-width:970px) {
+	.wrapper {
+		grid-template: minmax(230px, auto) 1fr minmax(200px, auto) / 1fr;
+	grid-template-areas: 
+	"header"
+	"main"
+	"footer";
+	}
+
+	.header {
+		grid-area: header;
+		&__link {
+			font-size: 32px;
+			line-height: 50px;
+		}
+
+		&__list{
+			align-items: center;
+		}
+	}
+
+	.main {
+		grid-area: main;
+	}
+
+	.content {
+		&__text {
+			font-size: 14px;
+			line-height: 22px;
+		}
+	}
+
+	.sidebar{
+		visibility: visible;
+		&__return{
+			justify-self: center;
+		}
+	}
+
+	.footer {
+		grid-area: footer;
+		font-size: 11px;
+		line-height: 16px;
+	}
+
+	.Icon {
+		&-Whatsapp, &-TG, &-VK {
+		font-size: 20px;
+		}
+
+		&-Head {
+			font-size: 16px;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.header {
+			&__link {
+				font-size: 24px;
+				line-height: 30px;
+		}
+	}
+
+	.content {
+		&__text {
+			font-size: 10px;
+			line-height: 14px;
+		}
+	}
+
+	.footer {
+		font-size: 10px;
+		line-height: 14px;
+	}
+
+	.Icon {
+		&-Whatsapp, &-TG, &-VK {
+		font-size: 16px;
+		}
+
+		&-Head {
+			font-size: 12px;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.header {
+		&__link {
+			font-size: 24px;
+			line-height: 30px;
+		}
+			&__list {
+				grid-template: minmax(auto, 40px) minmax(auto, 40px) minmax(auto, 40px) / 1fr;
+			}
+	}
+
+	.content {
+		grid-template: auto auto 1fr / 20px 1fr 20px;
+		&__text {
+			font-size: 10px;
+			line-height: 14px;
+		}
+	}
+}
+
+@media print {
+	body {
+		height: auto;
+	}
+	.wrapper {
+		display: block;
+	}
+	.header {
+		display: none;
+	}
+	.main {
+		margin: 5% 0 0 0;
+		height: auto;
+	}
+	.footer {
+		display: none;
+	}
+}

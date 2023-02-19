@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'Icons';
+  src: url("../fonts/Icons.ttf?qnuygb") format("truetype"), url("../fonts/Icons.woff?qnuygb") format("woff"), url("../fonts/Icons.svg?qnuygb#Icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="Icon-"]::before,
+[class*=" Icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.Icon-Discord:before {
+  content: "\e902";
+  color: #fff;
+}
+
+.Icon-Whatsapp:before {
+  content: "\e905";
+  color: #fff;
+}
+
+.Icon-Fugue:before {
+  content: "\e900";
+}
+
+.Icon-Head:before {
+  content: "\e901";
+}
+
+.Icon-TG:before {
+  content: "\e903";
+  color: #fff;
+}
+
+.Icon-VK:before {
+  content: "\e904";
+  color: #fff;
+}

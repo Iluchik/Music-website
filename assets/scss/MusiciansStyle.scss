@@ -1,0 +1,304 @@
+@import "fonts.scss";
+@import "iconsfont.scss";
+@import "reset.scss";
+
+html{
+	height:100%;
+}
+
+body{
+	height: 100%;
+	background-color: #030303;
+	font-family: Open Sans;
+	color: #ffffff;
+}
+
+ul{
+	list-style: none;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.container{
+	max-width: 1704px;
+	margin: 0 auto;
+}
+
+.content{
+	flex: 1 1 auto;
+}
+
+.header {
+	height: 414px;
+	display: flex;
+	align-items: center;
+		&__menu {
+			height: 40px;
+			width: 100%;
+		}
+}
+
+.list {
+	display: flex;
+	justify-content: space-around;
+	font-weight: 700;
+	font-size: 46px;
+	line-height: 40px;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 1px #ffffff;
+	text-decoration: none;
+	&:hover{
+		-webkit-text-fill-color: #ffffff;
+		-webkit-text-stroke: 0 #030303;
+	}
+
+	&__link {
+		flex: 1 1 360px;
+	}
+}
+
+.creator {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	height: 3124px;
+}
+
+.musician {
+	position: relative;
+	width: 65%;
+	font-family: 'Avenir Next Cyr';
+	font-weight: 400;
+	font-size: 120px;
+	line-height: 147px;
+	&__name {
+		&-1, &-2, &-3, &-4, &-5 {
+			text-decoration: none;
+			position: absolute;
+			font-family: 'Avenir Next Cyr';
+			font-weight: 400;
+			font-size: 120px;
+			line-height: 147px;
+			color: #ffffff;
+			-webkit-text-stroke: 1px #030303;
+		}
+		&-1 {
+			top: 30%;
+			left: 65%;
+		}
+		&-2 {
+			top: 30%;
+			left: 80%;
+		}
+		&-3, &-5 {
+			top: 15%;
+			left: 80%;
+		}
+		&-4 {
+			top: 30%;
+			left: 75%;
+		}
+	}
+	&__item {
+		&-1, &-2, &-3, &-4, &-5 {
+			overflow: hidden;
+			height: 400px;
+			& a>img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		&-1, &-4 {
+			& a>img{
+				object-position: 50% 25%;
+			}
+		}
+		&-3 {
+			& a>img{
+				object-position: 50% 15%;
+			}
+		}
+	}
+}
+
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	height: 275px;
+	font-family: 'Avenir Next Cyr';
+	color: #666666;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 22.05px;
+	letter-spacing: 0.03em;
+	&__bottom-menu {
+		height: 25px;
+		width: 100%;
+	}
+}
+
+.menu {
+	display: flex;
+	justify-content: space-around;
+	max-width: 1704px;
+	height: 70px;
+	&__messengers {
+		width: 15%;
+		align-items: center;
+	}
+
+	&__text {
+		width: 15%;
+		text-align: center;
+		align-self: center;
+	}
+
+	&__copy {
+		width: 15%;
+		text-align: center;
+		align-self: center;
+	}
+}
+
+.messenger {
+	display: flex;
+	justify-content: space-between;
+}
+.Icon {
+	&-Whatsapp, &-TG, &-VK {
+		font-size: 52px;
+		text-decoration: none;
+	}
+}
+
+@media (max-width: 1440px) {
+	.list {
+		font-size: 32px;
+		line-height: 40px;
+	}
+
+	.musician {
+		&__name {
+			&-1, &-2, &-3, &-4, &-5 {
+				font-size: 86px;
+				line-height: 100px;
+			}
+		}
+	}
+
+	.Icon {
+		&-Whatsapp, &-TG, &-VK {
+			font-size: 38px;
+		}
+	}
+}
+
+@media (max-width:1024px) {
+	.header{
+		height: 310px;
+	}
+
+	.list {
+		font-size: 28px;
+		line-height: 40px;
+	}
+
+	.creator {
+		height: 790px;
+	}
+
+	.musician {
+		&__name {
+			&-1, &-2, &-3, &-4, &-5 {
+				font-size: 24px;
+				line-height: 30px;
+				top: 45%;
+				left: 85%;
+			}
+		}
+
+		&__item {
+			&-1, &-2, &-3, &-4, &-5 {
+				height: 100px;
+			}
+		}
+	}
+
+	.footer {
+		height: 138px;
+		font-size: 10px;
+		line-height: 14px;
+	}
+
+	.Icon {
+		&-Whatsapp, &-TG, &-VK {
+			font-size: 16px;
+		}
+	}
+}
+
+@media (max-width:768px) {
+	.header{
+		height: 207px;
+		&__menu {
+			height: 150px;
+			width: 100%;
+		}
+	}
+	
+	.list {
+		display: flex;
+		flex-direction: column;
+		font-size: 24px;
+		line-height: 30px;
+		height: 100%;
+		&__link {
+			flex: 1 1 auto;
+			align-self: center;
+		}
+	}
+
+	.musician {
+		&__name {
+			&-4 {
+				left: 80%;
+			}
+		}
+	}
+}
+
+@media (max-width: 425px) {
+	.musician {
+		&__name {
+			&-1, &-2, &-3, &-4, &-5 {
+				font-size: 18px;
+				line-height: 20px;
+			}
+		}
+	}
+	.Icon {
+		&-Whatsapp, &-TG, &-VK {
+			font-size: 12px;
+		}
+	}
+}
+
+@media print {
+	.header {
+		display: none;
+	}
+	.main {
+		margin: 18% 0 0 0;
+	}
+	.footer {
+		display: none;
+	}
+}
